@@ -34,13 +34,13 @@ socket.on("sendTo",(data)=>{
   historyChat.push(data);
   //onsole.log(data);
    //view on modal 
-   
+    if(i.id_sender == currentUserId){
    messageChatBox.innerHTML +=`
    <div class="friend-message ">
             <p>${data.content}<span class="time ml-5">${data.time}'</span></p>
           </div>
    `;
-
+    }
 });
 //Updata user online status
 socket.on('updateUsers', (data)=>{
