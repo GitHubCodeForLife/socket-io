@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Chat Page</title>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/4/sketchy/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Add icon library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://twemoji.maxcdn.com/2/svg/1f1fb-1f1f3.svg"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+      <h1 class="navbar-brand">Chat Online</h1>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarColor02"
+        aria-controls="navbarColor02"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/"
+              >Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/list-user.html">List users</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+        <div class="mr-5">
+          <div class="dropdown mr-5">
+            <img
+              src="./img/avatar.jpg"
+              alt="avatar"
+              data-toggle="dropdown"
+              class="avartar"
+              id="user-avartar"
+            />
+            <div class="dropdown-menu" id="user-info"></div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Message chat box -->
+    <div class="container" id="message-chat-box">
+      <!-- Your message -->
+      <div class="your-message d-flex justify-content-end">
+        <p>Hello <span class="time ml-5">1h12'</span></p>
+      </div>
+      <!-- Friend message -->
+      <div class="friend-message ">
+        <p>Hello friend<span class="time ml-5">1h12'</span></p>
+      </div>
+    </div>
+    <!-- button on top -->
+    <button class="button-ontop btn" onclick='window.location.href = "#navbar"'>
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    </button>
+    <!-- Footer -->
+    <form action="">
+      <div class="footer row" style="margin: 0">
+        <div class="form-group has-success mb-3 mt-3 ml-1 col-9 col-md-10">
+          <input
+            type="text"
+            placeholder="message..."
+            class="form-control"
+            id="inputValid"
+          />
+        </div>
+        <div class="col-2 col-md-1">
+          <button class="btn btn-secondary mb-3 mt-3" type="submit">
+            <i class="fa fa-paper-plane" aria-hidden="true"></i> Send
+          </button>
+        </div>
+      </div>
+    </form>
+    <script src="./js/list.js"></script>
+  </body>
+</html>

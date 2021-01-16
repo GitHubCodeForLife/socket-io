@@ -7,7 +7,7 @@
 var app = require('../app');
 var debug = require('debug')('socket-io:server');
 var http = require('http');
-
+let users = [];
 /**
  * Get port from environment and store in Express.
  */
@@ -92,18 +92,38 @@ function onListening() {
 }
 
 const io = require('socket.io')(server);
-//socket 
-io.sockets.on('connection', function(socket){
-    console.log('Not work');
-   
-    socket.on('Client-sent-data',(data)=>{
-      console.log(data);
-      io.emit('Server-sent-data',data);
-    });
+ 
+io.on('connection', function(socket){
+  //console.log(socket.id);
+   socket.on('join',(user)=>{
+      // console.log(user);
+       userJoin(user);
+       io.emit('updateUsers',users);
+   })
+   socket.on('sendTo',(data)=>{
+       console.log(data);  
+       socket.to(data.id_receiver).emit('sendTo', data);
+   });
+   socket.on('disconnect',()=>{
+       console.log('User leave: ',socket.id);
+       userLeave(socket.id);
+       io.emit('updateUsers',users);
+   });
 
-    // socket.on('Client-sent-data',(data)=>{
-    //     console.log(data);
-    //     socket.emit('Server-sent-data',data);
-    // });
-  
-  });
+});
+
+
+//User join chat 
+function userJoin(data){
+   users.push(data);
+   console.log('Array user',users);
+}
+
+// User leaves chat
+function userLeave(id) {
+   const index = users.findIndex(user => user.id === id);
+ 
+   if (index !== -1) {
+     return users.splice(index, 1)[0];
+   }
+ }

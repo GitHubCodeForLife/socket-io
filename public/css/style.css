@@ -1,0 +1,50 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.avartar{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+.user-online{
+    margin-left: 20px;
+}
+.form-chat {
+    width: 100%;
+    background-color: lightblue;
+    color: white;
+    text-align: center;
+  }
+  #message-chat-box{
+    margin-bottom: 100px;
+  }
+  .button-ontop{
+    position: fixed;
+    right: 15px;
+    bottom: 100px;
+    background-color: lightblue;
+    color: white;
+    text-align: center;
+  }
+  .your-message{
+      color: red;
+  }
+  .friend-message{
+    color: green;
+  }
+  .time{
+      color: black;
+      opacity: 0.6;
+  }
+  .age-user{
+    color: greenyellow;
+  }

@@ -5,9 +5,5 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
-router.get('/socket.io',(req, res, next)=>{
-  console.log('Socket io oke');
-  res.render('index', { title: 'Express' });
-})
 
 module.exports = router;
