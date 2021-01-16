@@ -110,6 +110,7 @@ function sendMessage(){
   const d = new Date();
   const h = d.getHours();
   const m = d.getMinutes();
+  if (text == "") return ;
   const data = {
     id_sender: user.id,
     id_receiver: currentUserId, 
