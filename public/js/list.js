@@ -45,6 +45,9 @@ socket.on("sendTo",(data)=>{
 //Updata user online status
 socket.on('updateUsers', (data)=>{
   listUserOnline.innerHTML = ``;
+    if(data.length==0){
+        listUserOnline.innerHTML = '<div><span class="spinner-border"></span> Waiting to other persons</div>'
+    }
   data.map(i => {
     var id = String(i.id)
     if(id!=user.id){
