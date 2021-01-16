@@ -45,6 +45,7 @@ socket.on("sendTo",(data)=>{
 //Updata user online status
 socket.on('updateUsers', (data)=>{
   listUserOnline.innerHTML = ``;
+    console.log(data)
     if(data.length==0){
         listUserOnline.innerHTML = '<div><span class="spinner-border"></span> Waiting to other persons</div>'
     }
