@@ -50,34 +50,34 @@ function checkUser(){
     document.getElementById('district').value = user.address.district;
 }
 
-//Chọn tỉnh thành phố
-$.getJSON("http://mr80.net/files/2015/09/vietnam_provinces_cities.json", function(result){
-                    $.each(result, function(i, field){
-                       // console.log(field.cities);
-                      /// var district = JSON.parse(field.cities);
-                        //districts.filter(district=> console.log('hello'));
-                        $('#province').append('<option value='+i+'>'+field.name+'</option>');
-                        // for (var property in field.cities){
-                        // $("#districts").append('<option>'+field.cities[property]+'</opntion>'); 
-                      //}
-                    });
-                 });
-                 $('#province').click((e)=>{
-                    var conceptName = $('#province').val();
-                    console.log(conceptName);
-                    $("#district option").remove();
-                    // $("#district").append('<option value='+null+'>Chọn Quận / Huyện</opntion>');
-                    $.getJSON("http://mr80.net/files/2015/09/vietnam_provinces_cities.json", function(result){
-                    $.each(result, function(i, field){
-                       // console.log(field.cities);
-                      /// var district = JSON.parse(field.cities);
-                        //districts.filter(district=> console.log('hello'));
-                        for (var property in field.cities){
-                            if(conceptName==i)
-                             $("#district").append('<option value='+property+'>'+field.cities[property]+'</opntion>'); 
-                      }
-                    });
-                 });
-                 });
+// //Chọn tỉnh thành phố
+// $.getJSON("http://mr80.net/files/2015/09/vietnam_provinces_cities.json", function(result){
+//                     $.each(result, function(i, field){
+//                        // console.log(field.cities);
+//                       /// var district = JSON.parse(field.cities);
+//                         //districts.filter(district=> console.log('hello'));
+//                         $('#province').append('<option value='+i+'>'+field.name+'</option>');
+//                         // for (var property in field.cities){
+//                         // $("#districts").append('<option>'+field.cities[property]+'</opntion>'); 
+//                       //}
+//                     });
+//                  });
+//                  $('#province').click((e)=>{
+//                     var conceptName = $('#province').val();
+//                     console.log(conceptName);
+//                     $("#district option").remove();
+//                     // $("#district").append('<option value='+null+'>Chọn Quận / Huyện</opntion>');
+//                     $.getJSON("http://mr80.net/files/2015/09/vietnam_provinces_cities.json", function(result){
+//                     $.each(result, function(i, field){
+//                        // console.log(field.cities);
+//                       /// var district = JSON.parse(field.cities);
+//                         //districts.filter(district=> console.log('hello'));
+//                         for (var property in field.cities){
+//                             if(conceptName==i)
+//                              $("#district").append('<option value='+property+'>'+field.cities[property]+'</opntion>'); 
+//                       }
+//                     });
+//                  });
+//                  });
 
 
