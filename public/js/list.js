@@ -163,6 +163,13 @@ function enterpressalert(e, textarea){
 }
 
 function sendMessage(){
+   notificationList.forEach(i =>{
+    if(i.id == currentUserId){
+        i.notify = 0;
+        //Update notification UI
+        updateNotificationUI(i.id, i.notify);
+    }
+  } )
   const text = document.getElementById('inputValid').value ;
  // console.log(text, currentUserId);
   document.getElementById('inputValid').value  = '';
