@@ -48,3 +48,9 @@ input[type=number] {
   .age-user{
     color: greenyellow;
   }
+  .badge-notification{
+    background-color:  red;
+    border-radius: 50%;
+    right: 0;
+    top: 0;
+  }

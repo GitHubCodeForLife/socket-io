@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Home Page</title>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Add icon library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/4/sketchy/bootstrap.min.css"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://twemoji.maxcdn.com/2/svg/1f1fb-1f1f3.svg"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <h1 class="navbar-brand">Chat Online</h1>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarColor02"
+        aria-controls="navbarColor02"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/"
+              >Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" onclick="initailUser()" href="/list-user.html"
+              >List users</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section class="section section-lg mt-5 text-md-left">
+      <div class="container">
+        <div class="row row-60 justify-content-center">
+          <div class="col-lg-8">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.630704761172!2d106.67998301472183!3d10.762918262386151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f1c06f4e1dd%3A0x43900f1d4539a3d!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBLaG9hIGjhu41jIFThu7Egbmhpw6puIC0gxJDhuqFpIGjhu41jIFF14buRYyBHaWEgVFAuSENN!5e0!3m2!1svi!2s!4v1610176067895!5m2!1svi!2s"
+              width="600"
+              height="450"
+              frameborder="0"
+              style="border: 0"
+              allowfullscreen=""
+              aria-hidden="false"
+              tabindex="0"
+            ></iframe>
+          </div>
+          <div class="col-lg-4">
+            <div class="aside-contacts">
+              <div class="row row-30">
+                <div class="col-sm-6 col-lg-12 aside-contacts-item">
+                  <h1>Chat online</h1>
+                  <p>You can contact with me, by using facebook, mail, youtube...</p>
+                </div>
+                <div class="col-sm-6 col-lg-12 aside-contacts-item">
+                  <a
+                    href="https://www.facebook.com/changemylifek/"
+                    style="text-decoration: none"
+                    ><i
+                      class="fa fa-facebook-official mr-3"
+                      aria-hidden="true"
+                    ></i
+                    >Facebook</a
+                  >
+                </div>
+                <div class="col-sm-6 col-lg-12 aside-contacts-item">
+                  <a
+                    href="https://www.youtube.com/channel/UCM00M_ERXVLDaCAARd9Vm_g"
+                    style="text-decoration: none"
+                    ><i class="fa fa-youtube-play mr-3" aria-hidden="true"></i
+                    >Youtube</a
+                  >
+                </div>
+                <div class="col-sm-6 col-lg-12 aside-contacts-item mt-5">
+
+                  <a
+                    href="mailto:tranvantu7597@gmail.com"
+                    style="text-decoration: none"
+                    ><i class="fa fa-envelope-o mr-3" aria-hidden="true"></i
+                    >Send An Email If You Need</a
+                  >
+                  <form
+                    action="mailto:tranvantu7597@gmail.com"
+                    method="post"
+                    enctype="text/plain"
+                  >
+                    Name:<br />
+                    <input type="text" name="name" /><br />
+                    E-mail:<br />
+                    <input type="text" name="mail" /><br />
+                    Comment:<br />
+                    <input type="text" name="comment" size="50" /><br /><br />
+                    <input type="submit" value="Send" class="btn btn-primary"/>
+                    <input type="reset" value="Reset" class="btn btn-primary" />
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

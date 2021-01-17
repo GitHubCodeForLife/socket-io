@@ -49,7 +49,24 @@ function checkUser(){
     $('#province').click();
     document.getElementById('district').value = user.address.district;
 }
-
+function initailUser(){
+    const userString = localStorage.getItem('user');
+    let user = JSON.parse(userString);
+   
+    if(user == null){
+      console.log('Oke');
+      user = {
+        name: "Guest ",
+        age: "20",
+        address: {
+          province: "TP HCM",
+          district: "Quan 1"
+        }
+      }
+      localStorage.setItem('user', JSON.stringify(user));
+    }
+    
+  }
 // //Chọn tỉnh thành phố
 // $.getJSON("http://mr80.net/files/2015/09/vietnam_provinces_cities.json", function(result){
 //                     $.each(result, function(i, field){
